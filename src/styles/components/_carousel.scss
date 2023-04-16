@@ -1,7 +1,6 @@
 .carousel {
   &__line {
     position: relative;
-    width: max-content;
     top: 0;
     left: 0;
     z-index: 1;
@@ -11,5 +10,9 @@
   }
   &__item {
     display: block;
+  }
+  &__buttons {
+    margin-top: 3.2rem;
+    text-align: center;
   }
 }
