@@ -4,4 +4,11 @@
   color: var(--color-white);
   background-color: var(--color-primary);
   transition: background-color .3s;
+  border: none;
+  cursor: pointer;
+  line-height: 2.2rem;
+  padding: 2.1rem 14.2rem;
+  &:hover {
+    background-color: var(--color-secondary);
+  }
 }

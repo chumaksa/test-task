@@ -1,7 +1,9 @@
 .walking {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   column-gap: 2rem;
+  row-gap: 4rem;
   &__button {
     text-align: right;
   }
