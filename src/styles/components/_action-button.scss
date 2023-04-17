@@ -1,0 +1,33 @@
+.action-button {
+
+}
+
+.btn-round-arrow {
+  background-color: transparent;
+  border: 1px solid #E7717D;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .3s;
+  &:hover {
+    background-color: #E7717D;
+    .btn-round-arrow__icon {
+      stroke: var(--color-white);
+    }
+  }
+  &:disabled {
+    border-color: #EAEAEA;
+    background-color: transparent;
+    .btn-round-arrow__icon {
+      stroke: #EAEAEA;
+    }
+  }
+  &_prev {
+    transform: rotate(180deg);
+  }
+  &__icon {
+    stroke: #E7717D;
+    transition: stroke .3s;
+  }
+}

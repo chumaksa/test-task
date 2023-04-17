@@ -5,11 +5,14 @@ html {
   overflow-x: hidden;
 }
 
-h1 {
-  font-weight: 500;
+h1, h2 {
+  @extend %title;
   font-size: 4rem;
-  color: var(--color-black);
-  margin: 0;
+}
+
+h3 {
+@extend %title;
+  font-size: 3.2rem;
 }
 
 p {

@@ -10,18 +10,18 @@
 
 <body>
 
-<section class="banner mb-big">
-  <img class="banner__image" src="./images/Banner.jpg" alt="#">
+<section class="banner">
+  <img class="banner__image" src="./images/banner/Banner.jpg" alt="#">
 </section>
 
-<section>
+<section class="section">
   <div class="container">
     <div class="walking">
       <h1>Walking in Old Tallinn</h1>
       <div class="walking__button">
         <button class="buttons" type="button">Feedback</button>
       </div>
-      <div class="walking__desc mb-big">
+      <div class="walking__desc">
         <p>Welcome to Old Tallinn, the heart of the Estonian capital! <br> The history of the settlement once
           began from here, and today it is one of the best preserved medieval cities in Europe.</p>
         <p>I will take you through the streets and doorways and show you where they traded, what they ate, what
@@ -35,24 +35,69 @@
   </div>
 </section>
 
-<section>
+<section class="section">
   <div class="container">
     <div class="carousel">
       <div class="carousel__line">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_1.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_2.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_3.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_2.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_1.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_1.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_2.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_3.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_2.jpg" alt="#">
-        <img class="carousel__item" width="313" height="336" src="images/carousel_1.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_1.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_2.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_3.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_2.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_1.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_1.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_2.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_3.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_2.jpg" alt="#">
+        <img class="carousel__item" width="313" height="336" src="images/carousel/carousel_1.jpg" alt="#">
       </div>
       <div class="carousel__buttons">
-        <button id="prev">prev</button>
-        <button id="next">next</button>
+        <button id="prev" class="btn-round-arrow btn-round-arrow_prev">
+          <svg class="btn-round-arrow__icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.00003 1L7.00003 7L1.00003 13" />
+          </svg>
+        </button>
+        <button id="next" class="btn-round-arrow">
+          <svg class="btn-round-arrow__icon" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.00003 1L7.00003 7L1.00003 13" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Other tours</h2>
+    <div class="tours section">
+      <div class="tours__line">
+        <a class="card" href="#">
+          <div class="card__thumbnail-wrap">
+            <img class="card__thumbnail" src="images/card/photo1.jpg" alt="#">
+          </div>
+          <div class="card__desc">
+            <h3 class="card__title">St. Isaac's Cathedral in St. Petersburg</h3>
+            <p class="card__text">One of the highest domed structures in the world.</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card__thumbnail-wrap">
+            <img class="card__thumbnail" src="images/card/photo2.jpg" alt="#">
+          </div>
+          <div class="card__desc">
+            <h3 class="card__title">The Bridge of Peace, Tbilisi</h3>
+            <p class="card__text">Arc-shaped pedestrian bridge made of glass and steel</p>
+          </div>
+        </a>
+        <a class="card" href="#">
+          <div class="card__thumbnail-wrap">
+            <img class="card__thumbnail" src="images/card/photo3.jpg" alt="#">
+          </div>
+          <div class="card__desc">
+            <h3 class="card__title">El Caminito del Rey, Argentina</h3>
+            <p class="card__text">Tango, Open-air Museum, Painting, Art and History</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>

@@ -1,0 +1,32 @@
+.card {
+  display: block;
+  width: min-content;
+  text-decoration: none;
+  color: inherit;
+  &__thumbnail-wrap {
+    padding: 3rem 3rem 0 3rem;
+    margin-bottom: 2.4rem;
+    overflow: hidden;
+  }
+  &__thumbnail {
+    display: block;
+    transition: transform .3s;
+  }
+  &__text {
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+  }
+  &__desc {
+    padding: 0 3rem;
+  }
+  &:hover {
+    .card__thumbnail {
+      transform: scale(1.32);
+    }
+    .card__title {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+    }
+  }
+}

@@ -1,10 +1,14 @@
 @import "normalize.css";
 @import "abstracts/variables";
+@import "abstracts/placeholders";
 @import "base/typography";
 @import "base/base";
-@import "base/utils";
 @import "components/banner";
 @import "layout/container";
+@import "layout/section";
 @import "components/walking";
 @import "components/buttons";
+@import "components/action-button";
 @import "components/carousel";
+@import "components/tours";
+@import "components/card";
