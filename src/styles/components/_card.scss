@@ -7,6 +7,18 @@
     padding: 3rem 3rem 0 3rem;
     margin-bottom: 2.4rem;
     overflow: hidden;
+    position: relative;
+  }
+  &__button {
+    position: absolute;
+    z-index: 1;
+    top: 4.6rem;
+    right: 4.6rem;
+    transition: all .3s;
+    display: none;
+    &_active {
+      display: block;
+    }
   }
   &__thumbnail {
     display: block;
@@ -27,6 +39,11 @@
     .card__title {
       text-decoration: underline;
       text-decoration-thickness: 1px;
+    }
+    .card__button {
+      top: 1.6rem;
+      right: 1.6rem;
+      display: block;
     }
   }
 }
