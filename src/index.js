@@ -1,13 +1,21 @@
 import './styles/main.scss';
-import {addBtnListener, changeStateButton, carouselLine} from "./scripts/carousel";
+import Slider from "./scripts/slider";
 
-changeStateButton();
-addBtnListener();
+const carouselBtnNext = document.querySelector('#next');
+const carouselBtnPrev = document.querySelector('#prev');
+const carouselLine = document.querySelector('.carousel__line');
+const mobileWidthMediaQuery = window.matchMedia('(max-width: 900px)');
+const carousel = new Slider(carouselBtnNext, carouselBtnPrev, carouselLine, mobileWidthMediaQuery);
+carousel.changeStateButton();
+carousel.addBtnListener();
 
-carouselLine.addEventListener('transitionend', () => {
-  changeStateButton();
-  addBtnListener();
-});
+const toursBtnNext = document.querySelector('#tours-next');
+const toursBtnPrev = document.querySelector('#tours-prev');
+const toursLine = document.querySelector('.tours__line');
+const toursCarousel = new Slider(toursBtnNext, toursBtnPrev, toursLine, mobileWidthMediaQuery);
+toursCarousel.changeStateButton();
+toursCarousel.addBtnListener();
+
 
 const btnRoundLikeList = document.querySelectorAll('.card__button');
 btnRoundLikeList.forEach((btn) => {

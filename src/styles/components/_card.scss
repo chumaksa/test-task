@@ -32,18 +32,53 @@
   &__desc {
     padding: 0 3rem;
   }
-  &:hover {
-    .card__thumbnail {
-      transform: scale(1.32);
+  @media (hover: hover) {
+    &:hover {
+      .card__thumbnail {
+        transform: scale(1.32);
+      }
+      .card__title {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+      }
+      .card__button {
+        top: 1.6rem;
+        right: 1.6rem;
+        display: block;
+      }
     }
-    .card__title {
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
+  }
+}
+
+.card {
+  @include respond-to('large') {
+    &__thumbnail-wrap {
+      padding: 0;
     }
-    .card__button {
-      top: 1.6rem;
-      right: 1.6rem;
+    &__desc {
+      padding: 0;
+    }
+  }
+}
+
+.card {
+  @include respond-to('medium') {
+    &__thumbnail {
+      width: 266px;
+      height: 284px;
+    }
+    &__button {
       display: block;
+      top: .8rem;
+      right: .8rem;
+    }
+    &__desc {
+      font-size: 1.4rem;
+    }
+  }
+  @include respond-to('small') {
+    &__text {
+      font-size: 1.4rem;
     }
   }
 }

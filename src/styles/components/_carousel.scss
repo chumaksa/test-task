@@ -18,3 +18,22 @@
     justify-content: center;
   }
 }
+
+.carousel {
+  @include respond-to('medium') {
+    &__line {
+      gap: 2.4rem;
+    }
+    &__item {
+      width: 266px;
+      height: 284px;
+      flex: 0 0 auto;
+    }
+  }
+  @include respond-to('small') {
+    &__buttons {
+      margin-top: 2.4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

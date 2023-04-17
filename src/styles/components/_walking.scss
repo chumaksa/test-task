@@ -13,3 +13,25 @@
     }
   }
 }
+
+.walking {
+  @include respond-to('large') {
+    grid-template-columns: 1fr;
+    &__button {
+      text-align: left;
+    }
+  }
+  @include respond-to('small') {
+    &__desc {
+      br {
+        display: none;
+      }
+      &>p:first-of-type {
+        margin-top: 0;
+      }
+      &>p:last-of-type {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}

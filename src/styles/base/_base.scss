@@ -2,21 +2,32 @@ html {
   font-family: var(--main-font-family);
   font-size: var(--main-font-size);
   color: var(--color-gray);
-  overflow-x: hidden;
 }
 
 h1, h2 {
   @extend %title;
   font-size: 4rem;
+  @include respond-to('small') {
+    font-size: 2.4rem;
+  }
 }
 
 h3 {
-@extend %title;
+  @extend %title;
   font-size: 3.2rem;
+  @include respond-to('medium') {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
 }
 
 p {
   font-size: 1.8rem;
   margin: 2.4rem 0;
   line-height: 2.4rem;
+  @include respond-to('small') {
+    font-size: 1.4rem;
+    margin: 1.6rem 0;
+    line-height: 2.2rem;
+  }
 }

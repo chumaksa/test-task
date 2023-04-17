@@ -8,7 +8,14 @@
   cursor: pointer;
   line-height: 2.2rem;
   padding: 2.1rem 14.2rem;
-  &:hover {
-    background-color: var(--color-secondary);
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+  }
+  @include respond-to('small') {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

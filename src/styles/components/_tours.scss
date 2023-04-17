@@ -1,6 +1,24 @@
 .tours {
   &__line {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
     display: flex;
+    transition: all .3s;
     justify-content: space-between;
+    @include respond-to('large') {
+      gap: 2.4rem;
+    }
+  }
+  &__buttons {
+    gap: 3.2rem;
+    justify-content: center;
+    margin-top: 2.4rem;
+    margin-bottom: 2.5rem;
+    display: none;
+    @include respond-to('small') {
+      display: flex;
+    }
   }
 }
