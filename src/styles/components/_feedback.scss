@@ -1,0 +1,123 @@
+.modal-wrapper {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(35, 35, 35, 0.4);
+  z-index: 2;
+  &_active {
+    display: block;
+  }
+}
+
+.feedback {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  max-width: 1184px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 17.6rem;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  padding: 4rem 4rem 6.4rem 4rem;
+  box-shadow: 0px 0px 40px rgba(35, 35, 35, 0.05);
+  font-size: 1.6rem;
+  &_active {
+    display: block;
+  }
+  &__close {
+    display: flex;
+    justify-content: end;
+  }
+  &__grid-2 {
+    margin-top: 6.4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+  }
+  &__item {
+    display: flex;
+    gap: 1.6rem;
+    flex-direction: column;
+  }
+  &__input {
+    border: 1px solid var(--color-light);
+    height: 6.4rem;
+    box-sizing: border-box;
+    padding-left: 2.4rem;
+    &:hover {
+      border-color: var(--color-primary);
+    }
+    &:focus {
+      border-color: var(--color-secondary);
+    }
+    &:focus-visible {
+      border: 1px solid var(--color-secondary);
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba(35, 35, 35, 0.4);
+    }
+  }
+  &__grid-4 {
+    margin: 6.4rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: space-between;
+  }
+  &__textarea {
+    border: 1px solid var(--color-light);
+    height: 128px;
+    box-sizing: border-box;
+    padding-left: 2.4rem;
+    padding-top: 2.1rem;
+    &:hover {
+      border-color: var(--color-primary);
+    }
+    &:focus {
+      border-color: var(--color-secondary);
+    }
+    &:focus-visible {
+      border: 1px solid var(--color-secondary);
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba(35, 35, 35, 0.4);
+    }
+  }
+  &__footer {
+    margin-top: 6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.feedback {
+  @include respond-to('large') {
+    &__grid-2 {
+      grid-template-columns: 1fr;
+    }
+    &__grid-4 {
+      grid-template-columns: 1fr;
+      row-gap: 2.4rem;
+    }
+  }
+  @include respond-to('medium') {
+    &__footer {
+      flex-direction: column;
+      margin-top: 4rem;
+      gap: 4rem;
+      align-items: start;
+    }
+    &__button {
+      width: 100%;
+    }
+  }
+  @include respond-to('small') {
+    padding: 4rem 2rem;
+  }
+}

@@ -10,6 +10,76 @@
 
 <body>
 
+<div class="modal-wrapper"></div>
+
+<div class="feedback">
+  <div class="feedback__close">
+    <button id="close" class="btn-round-close">
+      <svg class="btn-round-close__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 1L0.999965 15M0.999965 1L15 15" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <h2>Feedback</h2>
+  <form>
+    <div class="feedback__grid-2">
+      <div class="feedback__item">
+        <label class="feedback__label" for="name">Your name</label>
+        <input class="feedback__input" type="text" name="name" id="name" placeholder="Placeholder">
+      </div>
+      <div class="feedback__item">
+        <label class="feedback__label" for="email">Email address</label>
+        <input class="feedback__input" type="email" name="email" id="email" placeholder="Placeholder">
+      </div>
+      <div class="feedback__item">
+        <label class="feedback__label" for="tel">Your phone</label>
+        <input class="feedback__input" type="tel" name="tel" id="tel" placeholder="Placeholder">
+      </div>
+      <div class="feedback__item">
+        <label class="feedback__label" for="trip">Choose a trip</label>
+        <select class="feedback__input select" name="trip" id="trip" required>
+          <option disabled selected>Choose</option>
+          <option>Walking in Old Tallinn</option>
+          <option>St. Isaac's Cathedral</option>
+          <option>The Bridge of Peace</option>
+          <option>El Caminito del Rey</option>
+        </select>
+      </div>
+    </div>
+    <div class="feedback__grid-4">
+      <label class="checkbox-chip" for="reviews">
+        <input type="checkbox" name="chips" id="reviews" checked>
+        <span>Reviews and suggestions</span>
+      </label>
+      <label class="checkbox-chip" for="question">
+        <input type="checkbox" name="chips" id="question">
+        <span>Question about content</span>
+      </label>
+      <label class="checkbox-chip" for="complaints">
+        <input type="checkbox" name="chips" id="complaints">
+        <span>Complaints</span>
+      </label>
+      <label class="checkbox-chip" for="other">
+        <input type="checkbox" name="chips" id="other">
+        <span>Other</span>
+      </label>
+    </div>
+    <div class="feedback__item">
+      <label class="feedback__label" for="text">Describe your question</label>
+      <textarea class="feedback__textarea" name="text" id="text" placeholder="Placeholder"></textarea>
+    </div>
+    <div class="feedback__footer">
+      <div>
+        <input class="custom-checkbox" type="checkbox" name="confidentiality" id="confidentiality" required>
+        <label for="confidentiality">Даю согласие на обработку</label>
+      </div>
+      <div class="feedback__button">
+        <button class="buttons" type="submit">Send</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 <section class="banner">
   <img class="banner__image" src="./images/banner/Banner.jpg" alt="#">
 </section>
@@ -19,7 +89,7 @@
     <div class="walking">
       <h1>Walking in Old Tallinn</h1>
       <div class="walking__button">
-        <button class="buttons" type="button">Feedback</button>
+        <button id="open" class="buttons" type="button">Feedback</button>
       </div>
       <div class="walking__desc">
         <p>Welcome to Old Tallinn, the heart of the Estonian capital! <br> The history of the settlement once

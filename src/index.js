@@ -9,6 +9,7 @@ const carousel = new Slider(carouselBtnNext, carouselBtnPrev, carouselLine, mobi
 carousel.changeStateButton();
 carousel.addBtnListener();
 
+
 const toursBtnNext = document.querySelector('#tours-next');
 const toursBtnPrev = document.querySelector('#tours-prev');
 const toursLine = document.querySelector('.tours__line');
@@ -25,3 +26,26 @@ btnRoundLikeList.forEach((btn) => {
     evt.currentTarget.querySelector('.btn-round-like').classList.toggle('btn-round-like_active');
   })
 })
+
+
+const closeBtn = document.querySelector('#close');
+const openBtn = document.querySelector('#open');
+const feedback = document.querySelector('.feedback');
+const modalWrapper = document.querySelector('.modal-wrapper');
+openBtn.addEventListener('click', () => {
+  feedback.classList.toggle('feedback_active');
+  modalWrapper.classList.toggle('modal-wrapper_active');
+});
+
+closeBtn.addEventListener('click', () => {
+  feedback.classList.toggle('feedback_active');
+  modalWrapper.classList.toggle('modal-wrapper_active');
+});
+
+document.body.addEventListener('click', (event) => {
+  if (!event.target.closest('.feedback') && event.target !== openBtn) {
+    feedback.classList.remove('feedback_active');
+    modalWrapper.classList.remove('modal-wrapper_active');
+  }
+})
+

@@ -1,0 +1,15 @@
+.select {
+  appearance: none;
+  background: url("../images/select/arrow_disable.svg") no-repeat right 1.6rem center;
+  outline: 0;
+}
+
+select:required:invalid {
+  color: rgba(35, 35, 35, 0.4);
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: var(--color-black);
+}

@@ -46,3 +46,20 @@
     }
   }
 }
+
+.btn-round-close {
+  @extend %btn-round;
+  border: 1px solid var(--color-light);
+  &__icon {
+    stroke: var(--color-light);
+    transition: stroke .3s;
+  }
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-primary);
+      .btn-round-like__icon {
+        stroke: var(--color-white);
+      }
+    }
+  }
+}
